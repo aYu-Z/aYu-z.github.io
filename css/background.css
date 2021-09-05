@@ -63,3 +63,9 @@
     rgba(109, 186, 130, 0.1) 100%
   );
 }
+
+/* ҳ��͸�� */
+
+#footer {
+    background: transparent !important;
+}
