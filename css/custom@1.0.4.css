@@ -96,12 +96,9 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     animation: ccc 3.2s linear infinite ;
 }
 
-/* 页面设置icon转动速度调整 */
 #rightside_config i.fas.fa-cog.fa-spin {
     animation: fa-spin 5s linear infinite ;
 }
-
-/*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
 
 @media screen and (max-width: 800px) {
     #aside_content div:not(:last-child) {
@@ -110,7 +107,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     }
 }
 
-/* 博主昵称颜色 */
 .author-info__name {
     color: #ff7242;
 }
