@@ -81,20 +81,6 @@
 
   
   <url>
-    <loc>http://www.ayu.link/tags/Java/</loc>
-    <lastmod>2022-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.ayu.link/tags/JUC/</loc>
-    <lastmod>2022-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.ayu.link/tags/Spring5/</loc>
     <lastmod>2022-03-25</lastmod>
     <changefreq>daily</changefreq>
@@ -103,6 +89,20 @@
   
   <url>
     <loc>http://www.ayu.link/tags/JDBC/</loc>
+    <lastmod>2022-03-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.ayu.link/tags/Java/</loc>
+    <lastmod>2022-03-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.ayu.link/tags/JUC/</loc>
     <lastmod>2022-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
