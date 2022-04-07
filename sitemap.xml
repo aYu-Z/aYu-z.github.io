@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ayu.link/2022/04/07/JUC%E4%B9%8B%E8%BE%85%E5%8A%A9%E7%B1%BB/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ayu.link/2022/04/06/JUC%E4%B9%8BCallable%E6%8E%A5%E5%8F%A3/</loc>
     
     <lastmod>2022-04-07</lastmod>
@@ -123,14 +130,14 @@
 
   
   <url>
-    <loc>http://www.ayu.link/tags/JDBC/</loc>
+    <loc>http://www.ayu.link/tags/Spring5/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.ayu.link/tags/Spring5/</loc>
+    <loc>http://www.ayu.link/tags/JDBC/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -151,14 +158,14 @@
   </url>
   
   <url>
-    <loc>http://www.ayu.link/tags/Hexo/</loc>
+    <loc>http://www.ayu.link/tags/%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.ayu.link/tags/%E6%97%A5%E5%BF%97/</loc>
+    <loc>http://www.ayu.link/tags/Hexo/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
