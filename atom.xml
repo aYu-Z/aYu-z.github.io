@@ -6,7 +6,7 @@
   <link href="http://www.ayu.link/atom.xml" rel="self"/>
   
   <link href="http://www.ayu.link/"/>
-  <updated>2022-04-07T13:26:39.400Z</updated>
+  <updated>2022-04-09T08:18:15.795Z</updated>
   <id>http://www.ayu.link/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JUC之阻塞队列</title>
+    <link href="http://www.ayu.link/2022/04/09/JUC%E4%B9%8B%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97/"/>
+    <id>http://www.ayu.link/2022/04/09/JUC%E4%B9%8B%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97/</id>
+    <published>2022-04-09T07:19:57.000Z</published>
+    <updated>2022-04-09T08:18:15.795Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是阻塞队列"><a href="#什么是阻塞队列" class="headerlink" title="什么是阻塞队列"></a>什么是阻塞队列</h2><p>阻塞队列(BlockingQueue)是一个支持两个附加操作的队列。这两个附加的操作是: 在队列为空时, 获取元素的线程会等待队列变为非空。当队列满时, 存储元素的线程会等待队列可用。阻塞队列常用于生产者和消费者的场景, 生产者是往队列里添加元素的线程, 消费者是从队列里拿元素的线程。阻塞队列就是生产者存放元素的容器, 而消费者也只从容器里拿元素。</p><ul><li>当队列是空的, 从队列中获取元素的操作将会被阻塞</li><li>当队列是满的, 从队列中添加元素的操作将会被阻塞</li><li>试图从空的队列中获取元素的线程将会被阻塞, 直到其他线程往空的队列插入新的元素</li><li>试图向已满的队列中添加新元素的线程将会被阻塞, 直到其他线程从队列中移除一个或多个元素或者完全清空, 使队列变得空闲起来并后续新增</li></ul><h2 id="阻塞队列种类"><a href="#阻塞队列种类" class="headerlink" title="阻塞队列种类"></a>阻塞队列种类</h2><ol><li><p><strong>ArrayBlockingQueue</strong></p><ul><li>基于数组构成的有界阻塞队列</li><li>在生产者插入数据和消费者获取数据时用的是同一把锁, 无法并行</li></ul></li><li><p><strong>LinkedBlockingQueue</strong></p><ul><li>基于链表构成的有界(默认值为<code>Integer.MAX_VALUE</code>)阻塞队列</li><li>插入数据和获取数据分别采用了独立的锁, 有较好的并发性能</li></ul></li><li><p><strong>DelayQueue</strong></p><ul><li>基于优先级队列实现的延迟无界阻塞队列</li><li>DelayQueue 中的元素只有当其指定的延迟时间到了, 才能够从队列中获取到该元素。</li><li>DelayQueue 是一个没有大小限制的队列, 因此往队列中插入数据的操作永远不会被阻塞, 只有获取数据的操作才会被阻塞</li></ul></li><li><p><strong>PriorityBlockingQueue</strong></p><ul><li>基于优先级队列实现的无界阻塞队列</li><li>支持优先级排序</li><li>不会阻塞生产者, 当队列中没有数据时, 会阻塞消费者</li></ul></li><li><p><strong>SynchronousQueue</strong></p><ul><li>一种无缓冲的等待队列</li><li>相对于有缓冲的BlockingQueue来说, 少了一个中间环节(缓冲区)</li><li>不存储元素, 是一个单个元素的队列</li></ul><blockquote><p><strong>SynchronousQueue</strong>公平模式与非公平模式的区别</p><ul><li><strong>公平模式</strong>: SynchronousQueue 会采用公平锁, 并配合一个 FIFO 队列来阻塞多余的生产者和消费者, 从而体系整体的公平策略</li><li><strong>非公平模式</strong>(默认)：SynchronousQueue 采用非公平锁, 同时配合一个 LIFO 队列来管理多余的生产者和消费者, 再高并发的情况下容易出现线程饥饿</li></ul></blockquote></li><li><p><strong>LinkedTransferQueue</strong></p><ul><li>基于链表结构实现的无界TransferQueue队列</li><li><strong>预占模式</strong>: 意思就是消费者线程取元素时, 如果队列不为空, 则直接取走数据, 若队列为空, 生成一个节点(元素为 null)入队, 消费者线程被等待在这个节点上, 生产者线程入队时发现有一个元素为 null 的节点, 生产者线程就不入队了, 直接就将元素填充到该节点, 并唤醒该节点等待的线程, 被唤醒的消费者线程取走元素, 从调用的方法返回</li></ul></li><li><p><strong>LinkedBlockingDeque</strong></p><ul><li>基于链表实现的双向有界阻塞队列</li><li>可以从队列的两端插入和移除元素, 双向队列因为多了一个操作队列的入口, 在多线程同时入队时, 也就减少了一半的竞争</li><li>插入元素时: 如果当前队列已满将会进入阻塞状态, 一直等到队列有空的位置时再该元素插入, 该操作可以通过设置超时参数, 超时后返回 false 表示操作失败, 也可以不设置超时参数一直阻塞, 中断后抛出 InterruptedException异常</li><li>读取元素时: 如果当前队列为空会阻塞住直到队列不为空然后返回元素, 同样可以通过设置超时参数</li></ul></li></ol><h2 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h2><table><thead><tr><th>方法类型</th><th>抛出异常</th><th>特殊值</th><th>阻塞</th><th>超时</th></tr></thead><tbody><tr><td>插入</td><td>add(e)</td><td>offer(e)</td><td>put(e)</td><td>offer(e, time, unit)</td></tr><tr><td>移除</td><td>remove()</td><td>poll()</td><td>take()</td><td>poll(time, unit)</td></tr><tr><td>检查</td><td>element()</td><td>peek()</td><td>NA</td><td>NA</td></tr></tbody></table><p>各种方法类型的具体效果</p><table><thead><tr><th align="left">方法类型</th><th align="left">效果</th></tr></thead><tbody><tr><td align="left">抛出异常</td><td align="left">当阻塞队列满时, 再往队列里add插入元素会抛出IllegalStateException:Queue full<br/>当阻塞队列空时, 再对队列remove移除元素会抛出NoSuchElementException</td></tr><tr><td align="left">特殊值</td><td align="left">插入方法, 成功返回true, 失败返回false<br />移出方法, 成功返回取出的元素, 失败返回null</td></tr><tr><td align="left">阻塞</td><td align="left">当阻塞队列满时, 生产者线程继续往队列里put元素, 队列就会一直阻塞生产者知道put数据成功或中断退出<br />当阻塞队列空时, 消费者线程试图从队列里take元素, 队列就会一直阻塞消费者线程知道队列里有数据</td></tr><tr><td align="left">超时</td><td align="left">当阻塞队列满时, 队列会阻塞生产者线程, 超过等待时限后生产者线程会退出<br />当阻塞队列空时, 队列会阻塞消费者线程, 超过等待时限后消费者线程会退出</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;什么是阻塞队列&quot;&gt;&lt;a href=&quot;#什么是阻塞队列&quot; class=&quot;headerlink&quot; title=&quot;什么是阻塞队列&quot;&gt;&lt;/a&gt;什么是阻塞队列&lt;/h2&gt;&lt;p&gt;阻塞队列(BlockingQueue)是一个支持两个附加操作的队列。这两个附加的操作是: 在队列为空</summary>
+      
+    
+    
+    
+    
+    <category term="Java" scheme="http://www.ayu.link/tags/Java/"/>
+    
+    <category term="JUC" scheme="http://www.ayu.link/tags/JUC/"/>
+    
+  </entry>
   
   <entry>
     <title>JUC之辅助类</title>
