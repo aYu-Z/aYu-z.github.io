@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ayu.link/2022/04/15/JVM%E4%B9%8B%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ayu.link/2022/04/15/JVM%E4%B9%8B%E5%88%9D%E8%AF%86JVM/</loc>
+    
+    <lastmod>2022-04-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ayu.link/2022/04/10/JUC%E4%B9%8BForkJoin%E6%A1%86%E6%9E%B6/</loc>
     
     <lastmod>2022-04-10</lastmod>
@@ -144,7 +158,7 @@
 
   <url>
     <loc>http://www.ayu.link/</loc>
-    <lastmod>2022-04-10</lastmod>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -152,49 +166,56 @@
   
   <url>
     <loc>http://www.ayu.link/tags/Spring5/</loc>
-    <lastmod>2022-04-10</lastmod>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.ayu.link/tags/Java/</loc>
-    <lastmod>2022-04-10</lastmod>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.ayu.link/tags/JDBC/</loc>
-    <lastmod>2022-04-10</lastmod>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.ayu.link/tags/JUC/</loc>
-    <lastmod>2022-04-10</lastmod>
+    <lastmod>2022-04-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.ayu.link/tags/JVM/</loc>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.ayu.link/tags/%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2022-04-10</lastmod>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.ayu.link/tags/Hexo/</loc>
-    <lastmod>2022-04-10</lastmod>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://www.ayu.link/tags/Mysql/</loc>
-    <lastmod>2022-04-10</lastmod>
+    <lastmod>2022-04-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
