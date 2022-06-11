@@ -111,3 +111,11 @@ h6::before {
 .author-info__name {
     color: #ff7242;
 }
+
+.avatar-img {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 70px;
+}
