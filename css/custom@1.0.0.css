@@ -1,8 +1,9 @@
-/* 文章页H1-H6图标样式效果 */
+/* 文章页H1-H6图标样式效果 
 h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     -webkit-animation: ccc 1.6s linear infinite ;
     animation: ccc 1.6s linear infinite ;
 }
+*/
 /*
 @-webkit-keyframes ccc {
     0% {
@@ -60,7 +61,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     font-size: 0.66rem;
     margin-top: 0.0rem;
 }
-
+/*
 #content-inner.layout h1:hover, #content-inner.layout h2:hover, #content-inner.layout h3:hover, #content-inner.layout h4:hover, #content-inner.layout h5:hover, #content-inner.layout h6:hover {
     color: #49b1f5 ;
 }
@@ -69,7 +70,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     -webkit-animation: ccc 3.2s linear infinite ;
     animation: ccc 3.2s linear infinite ;
 }
-
+*/
 /* 页面设置icon转动速度调整 */
 /*
 #rightside_config i.fas.fa-cog.fa-spin {
