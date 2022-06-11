@@ -23,33 +23,6 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
         transform: rotate(-1turn)
     }
 }
-
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
-    -webkit-animation: ccc 1.6s linear infinite ;
-    animation: ccc 1.6s linear infinite ;
-}
-
-@-webkit-keyframes ccc {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
-    }
-    to {
-        -webkit-transform: rotate(-1turn);
-        transform: rotate(-1turn)
-    }
-}
-@keyframes ccc {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
-    }
-    to {
-        -webkit-transform: rotate(-1turn);
-        transform: rotate(-1turn)
-    }
-}
-
 #content-inner.layout h1::before {
     color: #ef50a8 ;
     margin-left: -1.55rem;
@@ -96,6 +69,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     animation: ccc 3.2s linear infinite ;
 }
 
+/* 页面设置icon转动速度调整 */
 #rightside_config i.fas.fa-cog.fa-spin {
     animation: fa-spin 5s linear infinite ;
 }
