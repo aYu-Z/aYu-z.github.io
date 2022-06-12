@@ -100,15 +100,27 @@ h6::before {
 
 
 
-/*
+
 @media screen and (max-width: 800px) {
     #aside_content div:not(:last-child) {
         display: none;
         font-size: 13px;
     }
-}*/
+}
 
 .author-info__name {
     color: #ff7242;
+}
+
+.site-page {
+	font-size: 1em;
+}
+
+.site-name {
+	font-size: 2em;
+}
+
+#site-title {
+	font-size: 4.5em;
 }
 
