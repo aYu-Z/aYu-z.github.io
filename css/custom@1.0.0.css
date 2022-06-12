@@ -112,11 +112,11 @@ h6::before {
     color: #ff7242;
 }
 
-.site-page {
+a.site-page {
 	font-size: 1em;
 }
 
-.site-name {
+a.site-name {
 	font-size: 2em;
 }
 
